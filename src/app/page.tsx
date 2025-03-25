@@ -1,3 +1,4 @@
+import React from "react";
 import { NavbarDemo } from "./component/navbar.tsx";
 import { BackgroundBeams } from "../components/ui/background-beams.tsx";
 import { InteractiveHoverButton } from "../components/magicui/interactive-hover-button.tsx";
@@ -5,6 +6,14 @@ import { BackgroundLines } from "../components/ui/background-lines.tsx";
 import { GoogleGeminiEffectDemo } from "./component/google-gemini-effect.tsx";
 import { AnimatedBeamDemo } from "./component/animated-beam-bidirectional.tsx";
 import { FeaturesSectionDemo } from "./component/featureSection.tsx";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+} from "@clerk/nextjs";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,8 +35,23 @@ export default function Home() {
           <div className="flex-1 flex justify-center z-50">
             <NavbarDemo />
           </div>
-
-          <InteractiveHoverButton>Join Now</InteractiveHoverButton>
+          <ClerkProvider>
+            <SignedIn>
+              <Link
+                href="/"
+                className="px-4 py-2 rounded-full bg-[#131316] text-white text-sm font-semibold"
+              >
+                <InteractiveHoverButton>Join Now</InteractiveHoverButton>
+              </Link>
+            </SignedIn>
+            <SignedOut>
+              <SignInButton>
+                <button className="px-4 py-2 rounded-full bg-[#131316] text-white text-sm font-semibold">
+                  Sign in
+                </button>
+              </SignInButton>
+            </SignedOut>
+          </ClerkProvider>
         </div>
 
         {/* Middle section */}
