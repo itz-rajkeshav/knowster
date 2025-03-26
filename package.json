@@ -15,7 +15,6 @@
     "@auth/prisma-adapter": "^2.8.0",
     "@prisma/client": "^6.5.0",
     "@tabler/icons-react": "^3.31.0",
-    
     "axios": "^1.8.4",
     "bcryptjs": "^3.0.2",
     "class-variance-authority": "^0.7.1",
@@ -68,7 +67,7 @@
       "win32": "@tailwindcss/oxide-win32-x64-msvc@^4.0.16"
     }
   },
-  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [create-next-app](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
   "main": "index.js",
   "keywords": [],
   "author": "",
