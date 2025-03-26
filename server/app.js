@@ -1,7 +1,7 @@
 import express from 'express';
 import next from 'next';
-import userRoute from "../server/src/routes/user.routes"
-import  googleSIgnIn  from './src/routes/googleAuth.routes';
+import userRoute from "./src/routes/user.routes.js"
+import  googleSIgnIn  from './src/routes/googleAuth.routes.js';
 const dev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev });
 const handle = nextApp.getRequestHandler();

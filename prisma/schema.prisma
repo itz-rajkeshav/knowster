@@ -11,16 +11,17 @@ generator client {
 model User {
   id            String    @id @default(cuid())
   email         String    @unique
-  name          String
-  profileImage  String?
+  username      String
+  avatar        String?
   role          UserRole  @default(STUDENT)
   age           Int?
   country       String?
   language      String?
-  passwordHash  String
+  password      String
   emailVerified Boolean   @default(false)
   lastLogin     DateTime?
   phoneNo       String?
+  refreshToken  String?
 
   careerProfile      CareerProfile?
   learningPaths      LearningPath[]

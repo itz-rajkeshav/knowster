@@ -2,12 +2,13 @@
   "name": "knowster",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "ts-node server/app.ts"
+    "server": "node server/app.js"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.9",
