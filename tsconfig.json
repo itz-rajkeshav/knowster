@@ -34,7 +34,7 @@
   "include": [
     "**/*.ts",
     ".next/types/**/*.ts"
-, "src/app/component/google-gemini-effect.tsx"  ],
+, "src/app/component/google-gemini-effect.tsx", "server/src/controllers/User.controller.js", "server/src/controllers/GoogleSignIn.controller.js", "server/src/routes/googleAuth.routes.js", "server/src/routes/user.routes.js", "server/middleware/auth.middleware.js", "server/utils/asyncHandler.js", "server/utils/ApiResponse.js", "server/utils/ApiError.js", "server/app.js"  ],
   "exclude": [
     "node_modules"
   ]
